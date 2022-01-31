@@ -2,7 +2,7 @@ name: Jekyll site CI
 
 on:
   push:
-    branches: [ master ]
+
 
 
 jobs:
@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - run: |
-      git fetch --prune --unshallow
+        git fetch --prune --unshallow
     - name: Build the site in the jekyll/builder container
       run: |
         docker run \
